@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shravani | Portfolio Landing Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7ff;
+    color:#222;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:white;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#4f46e5;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#4f46e5;
+}
+
+/* HERO SECTION */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 8% 60px;
+    gap:50px;
+    flex-wrap:wrap;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    color:white;
+}
+
+.hero-text{
+    flex:1;
+    min-width:300px;
+}
+
+.hero-text h1{
+    font-size:55px;
+    line-height:1.2;
+    margin-bottom:15px;
+}
+
+.hero-text h1 span{
+    color:#ffd166;
+}
+
+.typing{
+    font-size:22px;
+    font-weight:500;
+    margin-bottom:20px;
+    color:#e0e7ff;
+}
+
+.hero-text p{
+    font-size:16px;
+    line-height:1.8;
+    max-width:550px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:12px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:white;
+    color:#4f46e5;
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:#4f46e5;
+}
+
+/* AVATAR */
+
+.hero-image{
+    flex:1;
+    min-width:280px;
+    display:flex;
+    justify-content:center;
+}
+
+.avatar{
+    width:340px;
+    animation:float 3s ease-in-out infinite;
+    filter:drop-shadow(0 10px 25px rgba(0,0,0,0.2));
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* SECTION */
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    color:#4f46e5;
+    margin-bottom:50px;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+    font-size:16px;
+    color:#555;
+}
+
+/* SKILLS */
+
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.skill-card{
+    background:white;
+    padding:20px 30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    font-weight:600;
+    transition:0.3s;
+    color:#4f46e5;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+}
+
+/* PROJECTS */
+
+.projects{
+    background:white;
+}
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#f5f7ff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    color:#4f46e5;
+    margin-bottom:12px;
+}
+
+.project-card p{
+    color:#555;
+    line-height:1.8;
+    font-size:15px;
+}
+
+/* RESUME */
+
+.resume{
+    text-align:center;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    color:white;
+    border-radius:20px;
+    padding:60px 30px;
+}
+
+.resume p{
+    margin:20px 0;
+    font-size:16px;
+}
+
+.resume a{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 28px;
+    background:white;
+    color:#4f46e5;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.resume a:hover{
+    transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact-container{
+    text-align:center;
+}
+
+.contact-container p{
+    margin:12px 0;
+    font-size:16px;
+    color:#555;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:40px;
+}
+
+.typing{
+    font-size:18px;
+}
+
+.avatar{
+    width:260px;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    gap:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Shravani</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>Hi, I'm <span>Shravani</span> </h1>
+
+<div class="typing">
+Student | Front-End Developer | Web Enthusiast
+</div>
+
+<p>
+I am a passionate student currently exploring web development and creating beginner-friendly responsive websites using HTML, CSS and JavaScript. I enjoy learning new technologies and improving my creativity through projects.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="btn btn-primary">
+View Projects
+</a>
+
+<a href="#contact" class="btn btn-secondary">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<!-- ANIMATED AVATAR -->
+
+<img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png" class="avatar">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about-content">
+
+<p>
+Hello! I am Shravani, a web development enthusiast and student passionate about designing clean and user-friendly websites. I enjoy transforming ideas into responsive web pages using HTML and CSS while continuously learning new technologies.
+</p>
+
+<br>
+
+<p>
+I also have knowledge of C, PHP, SQL, Python, Basic JavaScript and Advance Excel. I love exploring creative designs, improving problem-solving skills and working on practical projects to strengthen my front-end development journey.
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">My Skills</h2>
+
+<div class="skills-container">
+
+<div class="skill-card">HTML</div>
+<div class="skill-card">CSS</div>
+<div class="skill-card">Python</div>
+<div class="skill-card">C Programming</div>
+<div class="skill-card">JavaScript</div>
+<div class="skill-card">Advance Excel</div>
+<div class="skill-card">Problem Solving</div>
+<div class="skill-card">Communication</div>
+<div class="skill-card">Quick Learner</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+<h2 class="section-title">My Projects</h2>
+
+<div class="project-container">
+
+<div class="project-card">
+
+<h3>Portfolio Website</h3>
+
+<p>
+Developed a responsive personal portfolio website using HTML and CSS to showcase my skills, projects and contact information. This project improved my understanding of layouts, sections and responsive design.
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>Garden Website</h3>
+
+<p>
+Designed a gardening-themed academic website with responsive sections and user-friendly layouts. This project helped me strengthen my creativity and front-end development skills.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESUME -->
+
+<section>
+
+<div class="resume">
+
+<h2>My Resume</h2>
+
+<p>
+Download my resume to know more about my education, skills and projects.
+</p>
+
+<a href="Shravani_Dhavade_Resume.docx">
+Download Resume
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="contact-container">
+
+<p>@shravanidhavade07@gmail.com</p>
+
+<p>1234567890</p>
+
+<p>
+I am open to internships, collaborations and learning opportunities.
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Shravani Dhavade | Portfolio Landing Page</p>
+
+</footer>
+
+</body>
+</html>
